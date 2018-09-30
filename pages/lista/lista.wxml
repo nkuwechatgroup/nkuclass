@@ -1,0 +1,60 @@
+<template name='helps'>
+  <view style='height:90%;width:750rpx'>
+    <image mode='aspectFill' src='../../png/help/{{pngs}}' style='width:750rpx;height:100%' bindtap='next' data-index='{{indexs}}'></image>
+  </view>
+  <view style='height:200rpx;width:750rpx' bindtap='next' data-index='{{indexs}}'>
+    <view style='height:0rpx;width:750rpx'></view>
+    <view class='flex1' style='height:200rpx'>
+      <view style='height:200rpx;width:75rpx'></view>
+      <view style='height:200rpx;width:600rpx;text-align:center;color:#999999' bindtap='next' data-index='{{indexs}}'>
+        next >
+      </view>
+      <view style='height:200rpx;width:75rpx'></view>
+
+    </view>
+  </view>
+</template>
+
+<swiper style='height:100%;width:100%;' current='{{now_index}}'>
+  <swiper-item>
+    <template is='helps' data="{{pngs:'help1.png',indexs:1}}" />
+  </swiper-item>
+  <swiper-item>
+    <template is='helps' data="{{pngs:'help2.png',indexs:2}}" />
+
+
+  </swiper-item>
+  <swiper-item>
+    <template is='helps' data="{{pngs:'help3.png',indexs:3}}" />
+
+
+  </swiper-item>
+  <swiper-item>
+    <template is='helps' data="{{pngs:'help4.png',indexs:4}}" />
+
+
+  </swiper-item>
+  <swiper-item>
+    <template is='helps' data="{{pngs:'help5.png',indexs:5}}" />
+
+
+  </swiper-item>
+  <swiper-item>
+    <template is='helps' data="{{pngs:'help8.png',indexs:6}}" />
+
+
+  </swiper-item>
+  <swiper-item>
+    <template is='helps' data="{{pngs:'help7.png',indexs:7}}" />
+
+
+  </swiper-item>
+  <swiper-item>
+    <template is='helps' data="{{pngs:'help6.png',indexs:8}}" />
+
+
+  </swiper-item>
+
+
+
+</swiper>

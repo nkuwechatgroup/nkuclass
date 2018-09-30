@@ -1,0 +1,66 @@
+<template name="boxx">
+  <view style="width:40rpx"></view>
+  <navigator url="../list1/list1?index={{index}}" class="boxs shadow">
+    <view style="height:30%">
+      <view class="flex1">
+        <view style="width:30rpx"></view>
+        <view>
+          <view style="width:20rpx;height:30rpx"></view>
+          <view class="titlex">{{texta}}</view>
+          <view class="titlex">{{textb}}</view>
+        </view>
+      </view>
+
+    </view>
+    <view style="width:100%;display:flex">
+      <view style="width:40%; height:100%"></view>
+      <image src="../../png/ico/{{src1}}.png" mode='aspectFill' style="width:50%; height:150rpx"></image>
+    </view>
+
+  </navigator>
+
+
+</template>
+
+
+
+<view style="width:750rpx; height:1500rpx">
+  <view class="block1">
+    <view style="width:1250rpx; height:800rpx;" class="pp shadow">
+      <view style="width:100%; height:615rpx;" class=""></view>
+      <view style="width:100%; height:150rpx;" class="flex1">
+        <view style="width:450rpx; height:100%;" class=""></view>
+        <view style="width:300rpx; height:100%;">
+          <view style="width:300rpx; height:20%;" class="weekday">{{day1}}</view>
+          <view style="width:300rpx; height:67%;" class="time">{{time1}}</view>
+        </view>
+        <view style="width:130rpx; height:100%;" class=""></view>
+        <view>
+          <view style="height:60rpx"></view>
+          <view style="width:300rpx; height:100%;" class="pl">八里台</view>
+        </view>
+      </view>
+
+
+    </view>
+    <view style="height:40rpx;width:100%;"></view>
+    <view style="height:320rpx;width:100%;display:flex" class="">
+      <view style="width:130rpx"></view>
+      <template is="boxx" data="{{texta:'二主楼',textb:'A区',src1:'ico0',index:'0'}}" />
+      <template is="boxx" data="{{texta:'二主楼',textb:'A区',src1:'ico0',index:'0'}}" />
+      <template is="boxx" data="{{texta:'二主楼',textb:'B区',src1:'ico01',index:'1'}}" />
+      <template is="boxx" data="{{texta:'八里台',textb:'主楼',src1:'ico1',index:'2'}}" />
+
+
+    </view>
+    <view style="height:320rpx;width:100%;display:flex" class="">
+      <view style="width:320rpx"></view>
+      <template is="boxx" data="{{texta:'数学科学',textb:'学院',src1:'ico3',index:'3'}}" />
+      <template is="boxx" data="{{texta:'数学科学',textb:'学院',src1:'ico3',index:'3'}}" />
+      <template is="boxx" data="{{texta:'经济学院',textb:'园阶',src1:'ico4',index:'4'}}" />
+      <template is="boxx" data="{{texta:'外语学院',textb:'七教',src1:'ico2',index:'5'}}" />
+    </view>
+
+
+  </view>
+</view>

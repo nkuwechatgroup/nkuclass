@@ -1,0 +1,82 @@
+.titil3{
+  font-size: 28rpx;
+}
+
+
+.shadow{
+  box-shadow: 0px 0px 10rpx 1rpx #d6d6d6;
+  border-radius: 10rpx;
+}
+page {
+  display: block;
+  height: 100%;
+  /* background-color:  #6679a4; */
+  /* background-image: url("http://a12910.xyz:3000/png1"); */
+  background-size:cover;
+}
+
+/* .center{
+  justify-content:center;
+  align-items:center;
+  vertical-align:middle;
+  line-height: 70rpx;
+  text-align: center;
+
+} */
+.title2{
+  justify-content:center;
+  align-items:center;
+  vertical-align:middle;
+  text-align: center;
+  font-size: 20rpx;
+  color:#777777;
+  /* background-color: #000000; */
+  width:750rpx;
+  height:30rpx;
+}
+
+.title3{
+  justify-content:center;
+  align-items:center;
+  vertical-align:middle;
+  text-align: center;
+  font-size: 30rpx;
+  color:#555555;
+  /* background-color: #000000; */
+  width:750rpx;
+  height:45rpx;
+}
+.center{
+  justify-content:center;
+  align-items:center;
+  vertical-align:middle;
+  line-height: 170rpx;
+  text-align: left;
+  width:500rpx;
+  /* height:500rpx; */
+  color:#505050;
+  font-size: 39rpx;
+  /* background-color: #ffffff; */
+  font-weight: 300;
+  
+}/* lista.wxss */
+
+.center2{
+  justify-content:center;
+  align-items:center;
+  vertical-align:middle;
+  line-height: 200rpx;
+  text-align: left;
+  width:400rpx;
+  /* height:500rpx; */
+  color:#505050;
+  font-size: 50rpx;
+  /* background-color: #ffffff; */
+  font-weight: 900;
+  
+}/* lista.wxss */
+
+.gradients1{
+background: linear-gradient(#ffffff, #eeeeee)
+
+}

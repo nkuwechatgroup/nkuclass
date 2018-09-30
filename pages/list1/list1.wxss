@@ -1,0 +1,123 @@
+/**app.wxss**/
+/* 左右空白 */
+.blanklr1{
+  width:60rpx;
+  height:50rpx;
+
+}
+
+.blanklr2{
+  width:45rpx;
+  height:50rpx;
+  /* background-color: rgb(111,22,333) */
+}
+
+.leftblock{
+  width:60rpx;
+  /* background-color: #999999; */
+  font-size: 45rpx;
+  word-spacing:0rpx;
+}
+
+.dline4{
+  height: 30rpx;
+}
+
+
+
+/* ::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+  color: transparent;
+} */
+
+page {
+  display: block;
+  height: 100%;
+}
+
+.title1{
+  /* color: #f0f0f0; */
+  color: #111111;
+  /* background-color: hsl(hue, saturation, lightness) */
+  font-size: 50rpx;
+
+}
+
+.title2{
+  /* color: #f0f0f0; */
+  color: #111111;
+  font-size: 25rpx;
+}
+
+.subclass2{
+  width:145rpx;
+  height:50rpx;
+  line-height: 50rpx;
+  font-size: 20rpx;
+  /* border-radius: 100rpx; */
+  font-weight:400;
+  /* color: #111111; */
+  text-align: center;
+  /* background-color: #ffffff; */
+  /* letter-spacing: 0.1rem; */
+
+}
+
+/* 主要课表 */
+.subclass{
+  width:50rpx;
+  height:50rpx;
+  line-height: 50rpx;
+  font-size: 20rpx;
+  
+  font-weight:400;
+  /* color: #111111; */
+  text-align: center;
+  /* background-color: #ffffff; */
+
+}
+/* 没课 */
+.full
+{
+  color: #111111;
+  /* background-color: #f8f8f8; */
+  border: 3rpx solid transparent;
+  border-radius: 100rpx;
+}
+
+.full2
+{
+  color: #111111;
+  background-color: #f8f8f8;
+  border: 3rpx solid transparent;
+  border-radius: 100rpx;
+}
+/*有课*/
+.no 
+{
+  color: #f8f8f8;
+  background-color: #56164c;
+  /* background-color: #990000; */
+  border: 3rpx solid transparent;
+  border-radius: 100rpx;
+}
+/*有两节没课*/
+.one 
+{
+  border: 3rpx solid #56164c;
+  /* border-bottom: 5rpx solid #56164c; */
+  color: #111111;
+  border-radius: 100rpx;
+
+  /* background-color: #f8f8f8; */
+  /* border: 3rpx solid transparent; */
+}
+/* 教室不可用 */
+.notu
+{
+  background-color: #eeeeee;
+  color:#bbbbbb;
+  border: 3rpx solid transparent;
+  border-radius: 100rpx;
+}

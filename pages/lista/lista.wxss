@@ -1,0 +1,39 @@
+page {
+  display: block;
+  height: 100%;
+  /* background-color:  #6679a4; */
+  /* background-image: url("http://a12910.xyz:3000/png1"); */
+  background-size:cover;
+  /* background: linear-gradient(#ffffff, #cccccc); */
+
+}
+
+.center{
+  justify-content:center;
+  align-items:center;
+  vertical-align:middle;
+  line-height: 170rpx;
+  text-align: left;
+  width:550rpx;
+  /* height:500rpx; */
+  color:#505050;
+  font-size: 39rpx;
+  /* background-color: #ffffff; */
+  font-weight: 300;
+  
+}/* lista.wxss */
+
+.center2{
+  justify-content:center;
+  align-items:center;
+  vertical-align:middle;
+  line-height: 200rpx;
+  text-align: left;
+  width:400rpx;
+  /* height:500rpx; */
+  color:#505050;
+  font-size: 50rpx;
+  /* background-color: #ffffff; */
+  font-weight: 900;
+  
+}/* lista.wxss */

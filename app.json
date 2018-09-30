@@ -1,0 +1,19 @@
+{
+  "pages": [
+    "pages/wel/wel1",
+    "pages/list1/list1",
+    "pages/list2/list2",
+    "pages/blank/blank",
+    "pages/test/test",
+    "pages/lista/lista",
+    "pages/rclass/rclass",
+    "pages/classlist/classlist"
+    
+  ],
+  "window": {
+    "backgroundTextStyle": "white",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "NKU自习吧",
+    "navigationBarTextStyle": "black"
+  }
+}

@@ -1,0 +1,123 @@
+/**app.wxss**/
+.container {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: 200rpx 0;
+  box-sizing: border-box;
+} 
+
+
+
+.blank{
+  border: 3rpx solid transparent;
+}
+
+
+.flex1{
+  display: flex;
+  height: 100%;
+}
+
+/* 左右空白 */
+.blanklr1{
+  width:15rpx;
+  height:70rpx;
+
+}
+
+
+
+/* 标题1 */
+.titil{
+  width:50%;
+  height:70rpx;
+  justify-content:center;
+  align-items:center;
+  vertical-align:middle;
+  line-height: 70rpx;
+  text-align: center;
+}
+
+.blankline{
+  width:15rpx;
+  height:0rpx; 
+}
+
+.dline{
+  width:120rpx;
+  height:0rpx;
+  display: flex;
+}
+
+.dline2{
+  width:50%;
+  
+}
+
+.dline3{
+  height:10rpx;
+  width:100%;
+
+}
+
+
+/* 男厕所1 */
+.bg-x1{
+  background: #0000ff;
+}
+
+/* 女厕所2 */
+.bg-x2{
+  background: #ff0000;
+}
+
+/* 售货机3 */
+.bg-x3{
+  background: #00ff00;
+}
+
+/* 男厕所1 */
+.f-x1{
+  color: rgb(33,108,176);
+  line-height: 40rpx;
+}
+
+/* 女厕所2 */
+.f-x2{
+  color:rgb(177, 35, 27);
+  line-height: 40rpx;
+}
+
+/* 售货机3 */
+.f-x3{
+  color: rgb(43,163,70);
+  line-height: 40rpx;
+}
+
+.bg-1{
+  background-color: #eeeeee;
+}
+
+.bg-2{
+  background-color: #aaaaaa;
+}
+
+.block1{
+  height:70rpx;
+  width: 70rpx;
+}
+
+.block2{
+  height:70rpx;
+  width: 635rpx;
+}
+
+.block3{
+  width: 720rpx;
+  height: 70rpx;
+
+}
+

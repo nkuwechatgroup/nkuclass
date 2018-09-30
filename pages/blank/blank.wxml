@@ -1,0 +1,17 @@
+<!--blank.wxml-->
+<view style='height:300rpx;width:100&'></view>
+<view style='height:500rpx;width:100%' class='title1'>
+    {{text}}
+</view>
+
+<!-- <view class='flex1'>
+    <view style='width:200rpx;height:300rpx'></view>
+    <view style='width:150rpx;height:300rpx' class='title2'>{{dayy}}</view>
+    <view style='width:15rpx;height:100rpx;'></view>
+    <view style='width:6rpx;height:100rpx;background-color:#56164c'></view>
+    <view style='width:15rpx;height:100rpx;'></view>
+    <view style='width:150rpx;height:300rpx'>
+        <view style='height:200rpx '></view>
+        <view style='width:170rpx;height:100rpx ' class='title3 '>{{clas[14]}}</view>
+    </view>
+</view> -->

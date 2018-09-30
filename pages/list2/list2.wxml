@@ -1,0 +1,550 @@
+<template name="classes">
+  <view class='blanklr2'></view>
+  <!-- <navigator url='../rclass/rclass?room={{room}}&dayy={{days}}&timee={{times}}&num={{num}}' class='subclass' >{{room}}</navigator> -->
+  <view class='subclass' wx:if="{{datass[num]==-2}}"></view>
+  <navigator url='../rclass/rclass?room={{room}}&dayy={{days}}&timee={{times}}&num={{num}}' class='no subclass' wx:elif="{{datass[num]==0}}">{{room}}</navigator>
+  <!-- <navigator url='../blank/blank?room={{room}}&dayy={{days}}&timee={{times}}&num={{num}}' class='full subclass' wx:elif="{{datass[num]==-3}}">{{room}}</navigator> -->
+  <navigator url='../blank/blank?text="今天好像没有课诶"' class='full subclass' wx:elif="{{datass[num]==-3}}">{{room}}</navigator>
+  <view class='notu subclass' wx:elif="{{datass[num]==-1}}">{{room}}</view>
+  <navigator url='../rclass/rclass?room={{room}}&dayy={{days}}&timee={{times}}&num={{num}}' class='one subclass' wx:elif="{{datass[num]<3}}">{{room}}</navigator>
+  <navigator url='../rclass/rclass?room={{room}}&dayy={{days}}&timee={{times}}&num={{num}}' class='full subclass' wx:elif="{{datass[num]>=3}}">{{room}}</navigator>
+  <!-- <view class='blanklr2'></view> -->
+</template>
+
+<template name="title">
+  <view style="height:100%;width:60%;">
+    <view style="height:20%"></view>
+    <view class="flex1" style='height:70%'>
+      <view style="width:13%;height:100%"></view>
+      <view style='width:10rpx;height:100%;'>
+        <view style='width:100%;height:7%;'></view>
+        <view style='width:100%;height:70%;background-color:#56164c'></view>
+      </view>
+      <view style="width:40rpx;height:100%;"></view>
+      <view>
+        <view style="height:80rpx;" class="title1">{{place}}</view>
+        <view style="height:10rpx;"></view>
+        <picker mode='multiSelector' range='{{se_data}}' bindchange='select_time' value='{{[days-1, times-1]}}'>
+          <view style="height:40rpx;" class="title2">{{se_data[0][days-1]}}</view>
+          <view style="height:40rpx;" class="title2">{{se_data[1][times-1]}}</view>
+        </picker>
+
+      </view>
+
+    </view>
+  </view>
+</template>
+
+<template name="classes2">
+  <view class='blanklr2'></view>
+  <!-- <navigator url='../rclass/rclass?room={{room}}&dayy={{days}}&timee={{times}}&num={{num}}' class='subclass' >{{room}}</navigator> -->
+  <view class='subclass2' wx:if="{{datass[num]==-2}}"></view>
+  <navigator url='../rclass/rclass?room={{room}}&dayy={{days}}&timee={{times}}&num={{num}}' class='no subclass2' wx:elif="{{datass[num]==0}}">{{room}}</navigator>
+  <navigator url='../blank/blank?room={{room}}&dayy={{days}}&timee={{times}}&num={{num}}' class='full2 subclass2' wx:elif="{{datass[num]==-3}}">{{room}}</navigator>
+  <view class='notu subclass2' wx:elif="{{datass[num]==-1}}">{{room}}</view>
+  <navigator url='../rclass/rclass?room={{room}}&dayy={{days}}&timee={{times}}&num={{num}}' class='one subclass2' wx:elif="{{datass[num]<3}}">{{room}}</navigator>
+  <navigator url='../rclass/rclass?room={{room}}&dayy={{days}}&timee={{times}}&num={{num}}' class='full2 subclass2' wx:elif="{{datass[num]>=3}}">{{room}}</navigator>
+</template>
+
+<swiper style='width:100%;height:100%' current='{{index}}'>
+
+  <swiper-item>
+    <view style='height:25%;width:100%;' class="flex1">
+      <template is="title" data="{{place:'公教·A区',days:days, datass:datass, times:times, se_data:se_data}}" />
+      <!-- <view style='height:100%;width:0%'></view> -->
+      <view style='height:100%;width:40%'>
+        <!-- <view style='height:0%;width:100%'></view> -->
+        <image mode="aspectFit" src='../../png/ico/ico50.png' style='height:100%;width:100%;opacity:0.8'></image>
+
+      </view>
+    </view>
+
+    <view style="height:58%;width:100%;background-color:#fcfcfc" class="flex1">
+
+      <scroll-view scroll-y="true" style="height: 100%; ">
+
+        <view style="height:50rpx"></view>
+        <!-- 公教·A区 -->
+        <view>
+          <view class='flex1'>
+            <view class='blanklr1'></view>
+            <template is='classes' data="{{num : 2, datass: datass ,days:days,times:times,room : ' 101 '}}" />
+            <template is='classes' data="{{num : 247, datass: datass ,days:days,times:times,room : ' 103 '}}" />
+            <template is='classes' data="{{num : 2, datass: datass ,days:days,times:times,room : ' 104 '}}" />
+            <template is='classes' data="{{num : 248, datass: datass ,days:days,times:times,room : ' 105 '}}" />
+            <template is='classes' data="{{num : 249, datass: datass ,days:days,times:times,room : ' 106 '}}" />
+            <template is='classes' data="{{num : 250, datass: datass ,days:days,times:times,room : ' 107 '}}" />
+          </view>
+          <view class='dline4'></view>
+          <view class='flex1'>
+            <view class='blanklr1'></view>
+            <template is='classes' data="{{num : 2, datass: datass ,days:days,times:times,room : ' 120 '}}" />
+            <template is='classes' data="{{num : 255, datass: datass ,days:days,times:times,room : ' 119 '}}" />
+            <template is='classes' data="{{num : 254, datass: datass ,days:days,times:times,room : ' 118 '}}" />
+            <template is='classes' data="{{num : 253, datass: datass ,days:days,times:times,room : ' 115 '}}" />
+            <template is='classes' data="{{num : 252, datass: datass ,days:days,times:times,room : ' 114 '}}" />
+            <template is='classes' data="{{num : 251, datass: datass ,days:days,times:times,room : ' 108 '}}" />
+          </view>
+          <view class='dline4'></view>
+          <view class='dline4'></view>
+
+          <view class='flex1'>
+            <view class='blanklr1'></view>
+            <template is='classes' data="{{num : 2, datass: datass ,days:days,times:times,room : ' 201 '}}" />
+            <template is='classes' data="{{num : 256, datass: datass ,days:days,times:times,room : ' 203 '}}" />
+            <template is='classes' data="{{num : 257, datass: datass ,days:days,times:times,room : ' 204 '}}" />
+            <template is='classes' data="{{num : 2, datass: datass ,days:days,times:times,room : ' 205 '}}" />
+            <template is='classes' data="{{num : 2, datass: datass ,days:days,times:times,room : ' 206 '}}" />
+            <template is='classes' data="{{num : 257, datass: datass ,days:days,times:times,room : ' 204 '}}" />
+          </view>
+          <view class='dline4'></view>
+          <view class='flex1'>
+            <view class='blanklr1'></view>
+            <template is='classes' data="{{num : 261, datass: datass ,days:days,times:times,room : ' 217 '}}" />
+            <template is='classes' data="{{num : 260, datass: datass ,days:days,times:times,room : ' 216 '}}" />
+            <template is='classes' data="{{num : 2, datass: datass ,days:days,times:times,room : ' 215 '}}" />
+            <template is='classes' data="{{num : 2, datass: datass ,days:days,times:times,room : ' 214 '}}" />
+            <template is='classes' data="{{num : 259, datass: datass ,days:days,times:times,room : ' 213 '}}" />
+            <template is='classes' data="{{num : 258, datass: datass ,days:days,times:times,room : ' 208 '}}" />
+          </view>
+          <view class='dline4'></view>
+          <view class='dline4'></view>
+
+          <view class='flex1'>
+            <view class='blanklr1'></view>
+            <template is='classes' data="{{num : 2, datass: datass ,days:days,times:times,room : ' 301 '}}" />
+            <template is='classes' data="{{num : 2, datass: datass ,days:days,times:times,room : ' 302 '}}" />
+            <template is='classes' data="{{num : 2, datass: datass ,days:days,times:times,room : ' 303 '}}" />
+            <template is='classes' data="{{num : 2, datass: datass ,days:days,times:times,room : ' 304 '}}" />
+            <template is='classes' data="{{num : 2, datass: datass ,days:days,times:times,room : ' 305 '}}" />
+            <template is='classes' data="{{num : 2, datass: datass ,days:days,times:times,room : ' 306 '}}" />
+          </view>
+          <view class='dline4'></view>
+          <view class='flex1'>
+            <view class='blanklr1'></view>
+            <template is='classes' data="{{num : 2, datass: datass ,days:days,times:times,room : ' 321 '}}" />
+            <template is='classes' data="{{num : 2, datass: datass ,days:days,times:times,room : ' 320 '}}" />
+            <template is='classes' data="{{num : 2, datass: datass ,days:days,times:times,room : ' 319 '}}" />
+            <template is='classes' data="{{num : 2, datass: datass ,days:days,times:times,room : ' 318 '}}" />
+            <template is='classes' data="{{num : 2, datass: datass ,days:days,times:times,room : ' 317 '}}" />
+            <template is='classes' data="{{num : 2, datass: datass ,days:days,times:times,room : ' 309 '}}" />
+          </view>
+          <view class='dline4'></view>
+          <view class='flex1'>
+            <view class='blanklr1'></view>
+            <template is='classes' data="{{num : 2, datass: datass ,days:days,times:times,room : ' 314 '}}" />
+            <template is='classes' data="{{num : 2, datass: datass ,days:days,times:times,room : ' 315 '}}" />
+            <template is='classes' data="{{num : 2, datass: datass ,days:days,times:times,room : ' 316 '}}" />
+            <template is='classes' data="{{num : 0, datass: datass ,days:days,times:times,room : ' '}}" />
+            <template is='classes' data="{{num : 0, datass: datass ,days:days,times:times,room : ' '}}" />
+            <template is='classes' data="{{num : 0, datass: datass ,days:days,times:times,room : ' '}}" />
+          </view>
+          <view class='dline4'></view>
+          <view class='dline4'></view>
+          <view class='flex1'>
+            <view class='blanklr1'></view>
+            <template is='classes' data="{{num : 2, datass: datass ,days:days,times:times,room : ' 401 '}}" />
+            <template is='classes' data="{{num : 2, datass: datass ,days:days,times:times,room : ' 402 '}}" />
+            <template is='classes' data="{{num : 2, datass: datass ,days:days,times:times,room : ' 403 '}}" />
+            <template is='classes' data="{{num : 2, datass: datass ,days:days,times:times,room : ' 404 '}}" />
+            <template is='classes' data="{{num : 2, datass: datass ,days:days,times:times,room : ' 405 '}}" />
+            <template is='classes' data="{{num : 2, datass: datass ,days:days,times:times,room : ' 406 '}}" />
+          </view>
+          <view class='dline4'></view>
+          <view class='flex1'>
+            <view class='blanklr1'></view>
+            <template is='classes' data="{{num : 2, datass: datass ,days:days,times:times,room : ' 419 '}}" />
+            <template is='classes' data="{{num : 2, datass: datass ,days:days,times:times,room : ' 418 '}}" />
+            <template is='classes' data="{{num : 2, datass: datass ,days:days,times:times,room : ' 417 '}}" />
+            <template is='classes' data="{{num : 2, datass: datass ,days:days,times:times,room : ' 416 '}}" />
+            <template is='classes' data="{{num : 2, datass: datass ,days:days,times:times,room : ' 415 '}}" />
+            <template is='classes' data="{{num : 2, datass: datass ,days:days,times:times,room : ' 408 '}}" />
+          </view>
+          <view class='dline4'></view>
+          <view class='flex1'>
+            <view class='blanklr1'></view>
+            <template is='classes' data="{{num : 2, datass: datass ,days:days,times:times,room : ' 413 '}}" />
+            <template is='classes' data="{{num : 2, datass: datass ,days:days,times:times,room : ' 414 '}}" />
+            <template is='classes' data="{{num : 0, datass: datass ,days:days,times:times,room : ' '}}" />
+            <template is='classes' data="{{num : 0, datass: datass ,days:days,times:times,room : ' '}}" />
+            <template is='classes' data="{{num : 0, datass: datass ,days:days,times:times,room : ' '}}" />
+            <template is='classes' data="{{num : 0, datass: datass ,days:days,times:times,room : ' '}}" />
+          </view>
+          <view class='dline4'></view>
+
+        </view>
+
+
+        <view style="height:50rpx"></view>
+      </scroll-view>
+
+      <!-- <view style="width:0rpx;height:800rpx"></view> -->
+    </view>
+  </swiper-item>
+
+  <swiper-item>
+    <view style='height:25%;width:100%;' class="flex1">
+      <template is="title" data="{{place:'公教·B区',days:days, datass:datass, times:times, se_data:se_data}}" />
+      <view style='height:100%;width:40%'>
+        <image mode="aspectFit" src='../../png/ico/ico51.png' style='height:100%;width:100%;opacity:0.8'></image>
+      </view>
+    </view>
+    <view style="height:75%;width:100%;background-color:#fcfcfc" class="flex1">
+      <scroll-view scroll-y="true" style="height: 100%; ">
+        <view style="height:50rpx"></view>
+        <!-- B -->
+        <view>
+          <view class='flex1'>
+            <view class='blanklr1'></view>
+            <template is='classes' data="{{num : 273, datass: datass ,days:days,times:times,room : ' 129 '}}"/>
+            <template is='classes' data="{{num : 262, datass: datass ,days:days,times:times,room : ' 101 '}}"/>
+            <template is='classes' data="{{num : 263, datass: datass ,days:days,times:times,room : ' 102 '}}"/>
+            <template is='classes' data="{{num : 264, datass: datass ,days:days,times:times,room : ' 104 '}}"/>
+            <template is='classes' data="{{num : 265, datass: datass ,days:days,times:times,room : ' 107 '}}"/>
+            <template is='classes' data="{{num : 266, datass: datass ,days:days,times:times,room : ' 108 '}}"/>
+          </view>
+          <view class='dline4'></view>
+          <view class='flex1'>
+            <view class='blanklr1'></view>
+            <template is='classes' data="{{num : 272, datass: datass ,days:days,times:times,room : ' 122 '}}"/>
+            <template is='classes' data="{{num : 271, datass: datass ,days:days,times:times,room : ' 121 '}}"/>
+            <template is='classes' data="{{num : 270, datass: datass ,days:days,times:times,room : ' 120 '}}"/>
+            <template is='classes' data="{{num : 269, datass: datass ,days:days,times:times,room : ' 117 '}}"/>
+            <template is='classes' data="{{num : 268, datass: datass ,days:days,times:times,room : ' 116 '}}"/>
+            <template is='classes' data="{{num : 267, datass: datass ,days:days,times:times,room : ' 115 '}}"/>
+          </view>
+          <view class='dline4'></view>
+          <view class='dline4'></view>
+
+          <view class='flex1'>
+            <view class='blanklr1'></view>
+            <template is='classes' data="{{num : 282, datass: datass ,days:days,times:times,room : ' 222 '}}"/>
+            <template is='classes' data="{{num : 274, datass: datass ,days:days,times:times,room : ' 201 '}}"/>
+            <template is='classes' data="{{num : 275, datass: datass ,days:days,times:times,room : ' 202 '}}"/>
+            <template is='classes' data="{{num : 276, datass: datass ,days:days,times:times,room : ' 203 '}}"/>
+            <template is='classes' data="{{num : 277, datass: datass ,days:days,times:times,room : ' 204 '}}"/>
+            <template is='classes' data="{{num : 278, datass: datass ,days:days,times:times,room : ' 205 '}}"/>
+          </view>
+          <view class='dline4'></view>
+          <view class='flex1'>
+            <view class='blanklr1'></view>
+            <template is='classes' data="{{num : 281, datass: datass ,days:days,times:times,room : ' 217 '}}"/>
+            <template is='classes' data="{{num : 280, datass: datass ,days:days,times:times,room : ' 216 '}}"/>
+            <template is='classes' data="{{num : 2, datass: datass ,days:days,times:times,room : ' 215 '}}"/>
+            <template is='classes' data="{{num : 2, datass: datass ,days:days,times:times,room : ' 214 '}}"/>
+            <template is='classes' data="{{num : 2, datass: datass ,days:days,times:times,room : ' 213 '}}"/>
+            <template is='classes' data="{{num : 279, datass: datass ,days:days,times:times,room : ' 212 '}}"/>
+          </view>
+          <view class='dline4'></view>
+          <view class='dline4'></view>
+
+          <view class='flex1'>
+            <view class='blanklr1'></view>
+            <template is='classes' data="{{num : 2, datass: datass ,days:days,times:times,room : ' 307 '}}"/>
+            <template is='classes' data="{{num : 2, datass: datass ,days:days,times:times,room : ' 306 '}}"/>
+            <template is='classes' data="{{num : 2, datass: datass ,days:days,times:times,room : ' 304 '}}"/>
+            <template is='classes' data="{{num : 2, datass: datass ,days:days,times:times,room : ' 303 '}}"/>
+            <template is='classes' data="{{num : 2, datass: datass ,days:days,times:times,room : ' 301 '}}"/>
+            <template is='classes' data="{{num : 2, datass: datass ,days:days,times:times,room : ' 323 '}}"/>
+          </view>
+          <view class='dline4'></view>
+          <view class='flex1'>
+            <view class='blanklr1'></view>
+            <template is='classes' data="{{num : 2, datass: datass ,days:days,times:times,room : ' 313 '}}"/>
+            <template is='classes' data="{{num : 2, datass: datass ,days:days,times:times,room : ' 314 '}}"/>
+            <template is='classes' data="{{num : 2, datass: datass ,days:days,times:times,room : ' 315 '}}"/>
+            <template is='classes' data="{{num : 2, datass: datass ,days:days,times:times,room : ' 316 '}}"/>
+            <template is='classes' data="{{num : 2, datass: datass ,days:days,times:times,room : ' 317 '}}"/>
+            <template is='classes' data="{{num : 2, datass: datass ,days:days,times:times,room : ' 318 '}}"/>
+          </view>
+          <view class='dline4'></view>
+          <view class='dline4'></view>
+
+          <view class='flex1'>
+            <view class='blanklr1'></view>
+            <template is='classes' data="{{num : 2, datass: datass ,days:days,times:times,room : ' 423 '}}"/>
+            <template is='classes' data="{{num : 2, datass: datass ,days:days,times:times,room : ' 401 '}}"/>
+            <template is='classes' data="{{num : 2, datass: datass ,days:days,times:times,room : ' 402 '}}"/>
+            <template is='classes' data="{{num : 2, datass: datass ,days:days,times:times,room : ' 403 '}}"/>
+            <template is='classes' data="{{num : 2, datass: datass ,days:days,times:times,room : ' 405 '}}"/>
+            <template is='classes' data="{{num : 2, datass: datass ,days:days,times:times,room : ' 406 '}}"/>
+          </view>
+          <view class='dline4'></view>
+          <view class='flex1'>
+            <view class='blanklr1'></view>
+            <template is='classes' data="{{num : 2, datass: datass ,days:days,times:times,room : ' 417 '}}"/>
+            <template is='classes' data="{{num : 2, datass: datass ,days:days,times:times,room : ' 416 '}}"/>
+            <template is='classes' data="{{num : 2, datass: datass ,days:days,times:times,room : ' 415 '}}"/>
+            <template is='classes' data="{{num : 2, datass: datass ,days:days,times:times,room : ' 414 '}}"/>
+            <template is='classes' data="{{num : 2, datass: datass ,days:days,times:times,room : ' 413 '}}"/>
+            <template is='classes' data="{{num : 2, datass: datass ,days:days,times:times,room : ' 412 '}}"/>
+          </view>
+          <view class='dline4'></view>
+          <view class='dline4'></view>
+
+          <view class='flex1'>
+            <view class='blanklr1'></view>
+            <template is='classes' data="{{num : 2, datass: datass ,days:days,times:times,room : ' 511 '}}"/>
+            <template is='classes' data="{{num : 2, datass: datass ,days:days,times:times,room : ' 507 '}}"/>
+            <template is='classes' data="{{num : 2, datass: datass ,days:days,times:times,room : ' 502 '}}"/>
+            <template is='classes' data="{{num : 2, datass: datass ,days:days,times:times,room : ' 531 '}}"/>
+            <template is='classes' data="{{num : 2, datass: datass ,days:days,times:times,room : ' 529 '}}"/>
+            <template is='classes' data="{{num : 2, datass: datass ,days:days,times:times,room : ' 528 '}}"/>
+          </view>
+          <view class='dline4'></view>
+
+        </view>
+        <view style="height:50rpx"></view>
+      </scroll-view>
+    </view>
+  </swiper-item>
+
+  <swiper-item>
+    <view style='height:25%;width:100%;' class="flex1">
+      <template is="title" data="{{place:'公教·C区',days:days, datass:datass, times:times, se_data:se_data}}" />
+      <view style='height:100%;width:40%'>
+        <image mode="aspectFit" src='../../png/ico/ico52.png' style='height:100%;width:100%;opacity:0.8'></image>
+      </view>
+    </view>
+    <view style="height:75%;width:100%;background-color:#fcfcfc" class="flex1">
+      <scroll-view scroll-y="true" style="height: 100%; ">
+        <view style="height:50rpx"></view>
+        <!-- C -->
+        <view>
+          <view class='flex1'>
+            <view class='blanklr1'></view>
+            <template is='classes' data="{{num : 287, datass: datass ,days:days,times:times,room : ' 122 '}}"/>
+            <template is='classes' data="{{num : 288, datass: datass ,days:days,times:times,room : ' 124 '}}"/>
+            <template is='classes' data="{{num : 289, datass: datass ,days:days,times:times,room : ' 126 '}}"/>
+            <template is='classes' data="{{num : 290, datass: datass ,days:days,times:times,room : ' 127 '}}"/>
+            <template is='classes' data="{{num : 0, datass: datass ,days:days,times:times,room : ' '}}"/>
+            <template is='classes' data="{{num : 0, datass: datass ,days:days,times:times,room : ' '}}"/>
+          </view>
+          <view class='dline4'></view>
+          <view class='flex1'>
+            <view class='blanklr1'></view>
+            <template is='classes' data="{{num : 286, datass: datass ,days:days,times:times,room : ' 115 '}}"/>
+            <template is='classes' data="{{num : 285, datass: datass ,days:days,times:times,room : ' 114 '}}"/>
+            <template is='classes' data="{{num : 284, datass: datass ,days:days,times:times,room : ' 113 '}}"/>
+            <template is='classes' data="{{num : 283, datass: datass ,days:days,times:times,room : ' 103 '}}"/>
+            <template is='classes' data="{{num : 0, datass: datass ,days:days,times:times,room : ' '}}"/>
+            <template is='classes' data="{{num : 0, datass: datass ,days:days,times:times,room : ' '}}"/>
+          </view>
+          <view class='dline4'></view>
+          <view class='dline4'></view>
+
+          <view class='flex1'>
+            <view class='blanklr1'></view>
+            <template is='classes' data="{{num : 297, datass: datass ,days:days,times:times,room : ' 218 '}}"/>
+            <template is='classes' data="{{num : 298, datass: datass ,days:days,times:times,room : ' 219 '}}"/>
+            <template is='classes' data="{{num : 299, datass: datass ,days:days,times:times,room : ' 220 '}}"/>
+            <template is='classes' data="{{num : 291, datass: datass ,days:days,times:times,room : ' 202 '}}"/>
+            <template is='classes' data="{{num : 0, datass: datass ,days:days,times:times,room : ' '}}"/>
+            <template is='classes' data="{{num : 0, datass: datass ,days:days,times:times,room : ' '}}"/>
+          </view>
+          <view class='dline4'></view>
+          <view class='flex1'>
+            <view class='blanklr1'></view>
+            <template is='classes' data="{{num : 2, datass: datass ,days:days,times:times,room : ' 211 '}}"/>
+            <template is='classes' data="{{num : 296, datass: datass ,days:days,times:times,room : ' 210 '}}"/>
+            <template is='classes' data="{{num : 295, datass: datass ,days:days,times:times,room : ' 209 '}}"/>
+            <template is='classes' data="{{num : 294, datass: datass ,days:days,times:times,room : ' 208 '}}"/>
+            <template is='classes' data="{{num : 293, datass: datass ,days:days,times:times,room : ' 207 '}}"/>
+            <template is='classes' data="{{num : 292, datass: datass ,days:days,times:times,room : ' 206 '}}"/>
+          </view>
+          <view class='dline4'></view>
+          <view class='dline4'></view>
+
+          <view class='flex1'>
+            <view class='blanklr1'></view>
+            <template is='classes' data="{{num : 301, datass: datass ,days:days,times:times,room : ' 318 '}}"/>
+            <template is='classes' data="{{num : 302, datass: datass ,days:days,times:times,room : ' 319 '}}"/>
+            <template is='classes' data="{{num : 303, datass: datass ,days:days,times:times,room : ' 321 '}}"/>
+            <template is='classes' data="{{num : 300, datass: datass ,days:days,times:times,room : ' 302 '}}"/>
+            <template is='classes' data="{{num : 0, datass: datass ,days:days,times:times,room : ' '}}"/>
+            <template is='classes' data="{{num : 0, datass: datass ,days:days,times:times,room : ' '}}"/>
+          </view>
+          <view class='dline4'></view>
+          <view class='flex1'>
+            <view class='blanklr1'></view>
+            <template is='classes' data="{{num : 2, datass: datass ,days:days,times:times,room : ' 311 '}}"/>
+            <template is='classes' data="{{num : 2, datass: datass ,days:days,times:times,room : ' 310 '}}"/>
+            <template is='classes' data="{{num : 2, datass: datass ,days:days,times:times,room : ' 309 '}}"/>
+            <template is='classes' data="{{num : 2, datass: datass ,days:days,times:times,room : ' 308 '}}"/>
+            <template is='classes' data="{{num : 2, datass: datass ,days:days,times:times,room : ' 307 '}}"/>
+            <template is='classes' data="{{num : 2, datass: datass ,days:days,times:times,room : ' 306 '}}"/>
+          </view>
+          <view class='dline4'></view>
+          <view class='dline4'></view>
+
+          <view class='flex1'>
+            <view class='blanklr1'></view>
+            <template is='classes' data="{{num : 305, datass: datass ,days:days,times:times,room : ' 420 '}}"/>
+            <template is='classes' data="{{num : 306, datass: datass ,days:days,times:times,room : ' 421 '}}"/>
+            <template is='classes' data="{{num : 2, datass: datass ,days:days,times:times,room : ' 422 '}}"/>
+            <template is='classes' data="{{num : 304, datass: datass ,days:days,times:times,room : ' 401 '}}"/>
+            <template is='classes' data="{{num : 2, datass: datass ,days:days,times:times,room : ' 406 '}}"/>
+            <template is='classes' data="{{num : 2, datass: datass ,days:days,times:times,room : ' 407 '}}"/>
+          </view>
+          <view class='dline4'></view>
+          <view class='flex1'>
+            <view class='blanklr1'></view>
+            <template is='classes' data="{{num : 2, datass: datass ,days:days,times:times,room : ' 413 '}}"/>
+            <template is='classes' data="{{num : 2, datass: datass ,days:days,times:times,room : ' 412 '}}"/>
+            <template is='classes' data="{{num : 2, datass: datass ,days:days,times:times,room : ' 411 '}}"/>
+            <template is='classes' data="{{num : 2, datass: datass ,days:days,times:times,room : ' 410 '}}"/>
+            <template is='classes' data="{{num : 2, datass: datass ,days:days,times:times,room : ' 409 '}}"/>
+            <template is='classes' data="{{num : 2, datass: datass ,days:days,times:times,room : ' 408 '}}"/>
+          </view>
+          <view class='dline4'></view>
+          <view class='dline4'></view>
+
+          <view class='flex1'>
+            <view class='blanklr1'></view>
+            <template is='classes' data="{{num : 2, datass: datass ,days:days,times:times,room : ' 520 '}}"/>
+            <template is='classes' data="{{num : 2, datass: datass ,days:days,times:times,room : ' 521 '}}"/>
+            <template is='classes' data="{{num : 2, datass: datass ,days:days,times:times,room : ' 524 '}}"/>
+            <template is='classes' data="{{num : 2, datass: datass ,days:days,times:times,room : ' 530 '}}"/>
+            <template is='classes' data="{{num : 307, datass: datass ,days:days,times:times,room : ' 503 '}}"/>
+            <template is='classes' data="{{num : 0, datass: datass ,days:days,times:times,room : ' '}}"/>
+          </view>
+          <view class='dline4'></view>
+
+        </view>
+        <view style="height:50rpx"></view>
+      </scroll-view>
+    </view>
+  </swiper-item>
+
+  <swiper-item>
+    <view style='height:25%;width:100%;' class="flex1">
+      <template is="title" data="{{place:'公教·D区',days:days, datass:datass, times:times, se_data:se_data}}" />
+      <view style='height:100%;width:40%'>
+        <image mode="aspectFit" src='../../png/ico/ico53.png' style='height:100%;width:100%;opacity:0.8'></image>
+      </view>
+    </view>
+    <view style="height:75%;width:100%;background-color:#fcfcfc" class="flex1">
+      <scroll-view scroll-y="true" style="height: 100%; ">
+        <view style="height:50rpx"></view>
+        <!-- D -->
+        <view>
+          <view class='flex1'>
+            <view class='blanklr1'></view>
+            <template is='classes' data="{{num : 308, datass: datass ,days:days,times:times,room : ' 107 '}}"/>
+            <template is='classes' data="{{num : 309, datass: datass ,days:days,times:times,room : ' 108 '}}"/>
+            <template is='classes' data="{{num : 310, datass: datass ,days:days,times:times,room : ' 109 '}}"/>
+            <template is='classes' data="{{num : 311, datass: datass ,days:days,times:times,room : ' 110 '}}"/>
+            <template is='classes' data="{{num : 312, datass: datass ,days:days,times:times,room : ' 111 '}}"/>
+            <template is='classes' data="{{num : 313, datass: datass ,days:days,times:times,room : ' 117 '}}"/>
+          </view>
+          <view class='dline4'></view>
+          <view class='flex1'>
+            <view class='blanklr1'></view>
+            <template is='classes' data="{{num : 319, datass: datass ,days:days,times:times,room : ' 125 '}}"/>
+            <template is='classes' data="{{num : 318, datass: datass ,days:days,times:times,room : ' 124 '}}"/>
+            <template is='classes' data="{{num : 317, datass: datass ,days:days,times:times,room : ' 123 '}}"/>
+            <template is='classes' data="{{num : 316, datass: datass ,days:days,times:times,room : ' 120 '}}"/>
+            <template is='classes' data="{{num : 315, datass: datass ,days:days,times:times,room : ' 119 '}}"/>
+            <template is='classes' data="{{num : 314, datass: datass ,days:days,times:times,room : ' 118 '}}"/>
+          </view>
+          <view class='dline4'></view>
+          <view class='dline4'></view>
+
+          <view class='flex1'>
+            <view class='blanklr1'></view>
+            <template is='classes' data="{{num : 320, datass: datass ,days:days,times:times,room : ' 206 '}}"/>
+            <template is='classes' data="{{num : 321, datass: datass ,days:days,times:times,room : ' 207 '}}"/>
+            <template is='classes' data="{{num : 2, datass: datass ,days:days,times:times,room : ' 208 '}}"/>
+            <template is='classes' data="{{num : 2, datass: datass ,days:days,times:times,room : ' 209 '}}"/>
+            <template is='classes' data="{{num : 322, datass: datass ,days:days,times:times,room : ' 210 '}}"/>
+            <template is='classes' data="{{num : 2, datass: datass ,days:days,times:times,room : ' 215 '}}"/>
+          </view>
+          <view class='dline4'></view>
+          <view class='flex1'>
+            <view class='blanklr1'></view>
+            <template is='classes' data="{{num : 2, datass: datass ,days:days,times:times,room : ' 221 '}}"/>
+            <template is='classes' data="{{num : 2, datass: datass ,days:days,times:times,room : ' 220 '}}"/>
+            <template is='classes' data="{{num : 2, datass: datass ,days:days,times:times,room : ' 219 '}}"/>
+            <template is='classes' data="{{num : 323, datass: datass ,days:days,times:times,room : ' 218 '}}"/>
+            <template is='classes' data="{{num : 2, datass: datass ,days:days,times:times,room : ' 217 '}}"/>
+            <template is='classes' data="{{num : 2, datass: datass ,days:days,times:times,room : ' 216 '}}"/>
+          </view>
+          <view class='dline4'></view>
+          <view class='dline4'></view>
+
+          <view class='flex1'>
+            <view class='blanklr1'></view>
+            <template is='classes' data="{{num : 324, datass: datass ,days:days,times:times,room : ' 304 '}}"/>
+            <template is='classes' data="{{num : 325, datass: datass ,days:days,times:times,room : ' 305 '}}"/>
+            <template is='classes' data="{{num : 326, datass: datass ,days:days,times:times,room : ' 306 '}}"/>
+            <template is='classes' data="{{num : 327, datass: datass ,days:days,times:times,room : ' 307 '}}"/>
+            <template is='classes' data="{{num : 328, datass: datass ,days:days,times:times,room : ' 308 '}}"/>
+            <template is='classes' data="{{num : 2, datass: datass ,days:days,times:times,room : ' 318 '}}"/>
+          </view>
+          <view class='dline4'></view>
+          <view class='flex1'>
+            <view class='blanklr1'></view>
+            <template is='classes' data="{{num : 2, datass: datass ,days:days,times:times,room : ' 324 '}}"/>
+            <template is='classes' data="{{num : 2, datass: datass ,days:days,times:times,room : ' 323 '}}"/>
+            <template is='classes' data="{{num : 2, datass: datass ,days:days,times:times,room : ' 322 '}}"/>
+            <template is='classes' data="{{num : 334, datass: datass ,days:days,times:times,room : ' 321 '}}"/>
+            <template is='classes' data="{{num : 333, datass: datass ,days:days,times:times,room : ' 320 '}}"/>
+            <template is='classes' data="{{num : 332, datass: datass ,days:days,times:times,room : ' 319 '}}"/>
+          </view>
+          <view class='dline4'></view>
+          <view class='flex1'>
+            <view class='blanklr1'></view>
+            <template is='classes' data="{{num : 329, datass: datass ,days:days,times:times,room : ' 311 '}}"/>
+            <template is='classes' data="{{num : 330, datass: datass ,days:days,times:times,room : ' 312 '}}"/>
+            <template is='classes' data="{{num : 331, datass: datass ,days:days,times:times,room : ' 313 '}}"/>
+            <template is='classes' data="{{num : 0, datass: datass ,days:days,times:times,room : ' '}}"/>
+            <template is='classes' data="{{num : 0, datass: datass ,days:days,times:times,room : ' '}}"/>
+            <template is='classes' data="{{num : 0, datass: datass ,days:days,times:times,room : ' '}}"/>
+          </view>
+          <view class='dline4'></view>
+          <view class='dline4'></view>
+
+          <view class='flex1'>
+            <view class='blanklr1'></view>
+            <template is='classes' data="{{num : 2, datass: datass ,days:days,times:times,room : ' 403 '}}"/>
+            <template is='classes' data="{{num : 2, datass: datass ,days:days,times:times,room : ' 404 '}}"/>
+            <template is='classes' data="{{num : 2, datass: datass ,days:days,times:times,room : ' 405 '}}"/>
+            <template is='classes' data="{{num : 2, datass: datass ,days:days,times:times,room : ' 406 '}}"/>
+            <template is='classes' data="{{num : 2, datass: datass ,days:days,times:times,room : ' 407 '}}"/>
+            <template is='classes' data="{{num : 2, datass: datass ,days:days,times:times,room : ' 416 '}}"/>
+          </view>
+          <view class='dline4'></view>
+          <view class='flex1'>
+            <view class='blanklr1'></view>
+            <template is='classes' data="{{num : 2, datass: datass ,days:days,times:times,room : ' 422 '}}"/>
+            <template is='classes' data="{{num : 2, datass: datass ,days:days,times:times,room : ' 421 '}}"/>
+            <template is='classes' data="{{num : 2, datass: datass ,days:days,times:times,room : ' 420 '}}"/>
+            <template is='classes' data="{{num : 2, datass: datass ,days:days,times:times,room : ' 419 '}}"/>
+            <template is='classes' data="{{num : 2, datass: datass ,days:days,times:times,room : ' 418 '}}"/>
+            <template is='classes' data="{{num : 2, datass: datass ,days:days,times:times,room : ' 417 '}}"/>
+          </view>
+          <view class='dline4'></view>
+          <view class='flex1'>
+            <view class='blanklr1'></view>
+            <template is='classes' data="{{num : 2, datass: datass ,days:days,times:times,room : ' 409 '}}"/>
+            <template is='classes' data="{{num : 2, datass: datass ,days:days,times:times,room : ' 410 '}}"/>
+            <template is='classes' data="{{num : 2, datass: datass ,days:days,times:times,room : ' 411 '}}"/>
+            <template is='classes' data="{{num : 0, datass: datass ,days:days,times:times,room : ' '}}"/>
+            <template is='classes' data="{{num : 0, datass: datass ,days:days,times:times,room : ' '}}"/>
+            <template is='classes' data="{{num : 0, datass: datass ,days:days,times:times,room : ' '}}"/>
+          </view>
+          <view class='dline4'></view>
+
+        </view>
+
+
+
+        <view style="height:50rpx"></view>
+      </scroll-view>
+    </view>
+  </swiper-item>
+
+
+
+
+</swiper>

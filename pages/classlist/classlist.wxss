@@ -1,0 +1,14 @@
+/* pages/classlist/classlist.wxss */
+
+.side 
+{
+  background-color: #cccccc;
+  text-align: center;
+  height: 72rpx;
+  width: 20%;
+}
+
+.block3{
+  height: 70rpx;
+  width: 720rpx;
+}

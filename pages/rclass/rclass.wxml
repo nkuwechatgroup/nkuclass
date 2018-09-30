@@ -1,0 +1,132 @@
+<!--rclass.wxml-->
+<template name='cla'>
+
+  <!-- <view wx:if="{{namm.name!=''}}"> -->
+  <view style='height:15rpx'></view>
+  <view class='flex1'>
+    <view style='width:60rpx'></view>
+    <view style='width:70rpx;height:100rpx'>
+      <view style='height:15rpx'></view>
+      <view wx:if="{{is_timee=='True'}}">
+        <view class='subclass no'>{{count}}</view>
+      </view>
+      <view wx:else>
+        <view class='subclass full'>{{count}}</view>
+        <view></view>
+      </view>
+    </view>
+    <view style='width:25rpx'></view>
+    <view style='height:100rpx'>
+      <view wx:if="{{is_timee=='True'}}">
+        <view style='font-size:35rpx;height:45rpx'>{{namm.name}}</view>
+        <view style='font-size:25rpx'>{{namm.teacher}}</view>
+      </view>
+      <view wx:else>
+        <view style='font-size:35rpx;height:45rpx;color:#aaaaaa'>{{namm.name}}</view>
+        <view style='font-size:25rpx;color:#aaaaaa'>{{namm.teacher}}</view>
+      </view>
+    </view>
+    <!-- </view> -->
+
+
+  </view>
+  <!-- <view wx:elif="{{is_timee&&namm.name==''}}">
+    <view style='height:30rpx'></view>
+    <view class='center' style='width:750rpx;height:100rpx;color:#333333'>·{{count}}·</view>
+  </view>
+  <view wx:elif="{{!is_timee&&namm.name==''}}">
+    <view style='height:30rpx'></view>
+    <view class='center' style='width:750rpx;height:100rpx;color:#555555'>·{{count}}·</view>
+  </view> -->
+
+  <view class='flex1'>
+    <view style='height:2rpx;width:150rpx;background-color:#ffffff'></view>
+    <view style='height :2rpx;width:550rpx;background-color:#eeeeee'></view>
+    <!-- <view style='height:1rpx;width:100rpx;background-color:#ffffff'></view> -->
+    <view style='height:2rpx;width:150rpx;background-color:#ffffff'></view>
+  </view>
+</template>
+
+<template name='cla2'>
+  <view wx:if='{{namm.name==namm2.name}}'>
+    <view wx:if='{{timee==count||timee==(count+1)}}'>
+      <template is='cla' data='{{namm:namm, is_timee:"True", count:count + "-" + (count+1)}}' />
+    </view>
+    <view wx:else>
+      <template is='cla' data='{{namm:namm, is_timee:"False", count:count + "-" + (count+1)}}' />
+    </view>
+  </view>
+  <view wx:else>
+    <view wx:if='{{timee==count}}'>
+      <template is='cla' data='{{namm:namm, is_timee:"True", count:count}}' />
+    </view>
+    <view wx:else>
+      <template is='cla' data='{{namm:namm, is_timee:"False", count:count}}' />
+    </view>
+    <view wx:if='{{timee==count+1}}'>
+      <template is='cla' data='{{namm:namm2, is_timee:"True", count:(count+1)}}' />
+    </view>
+    <view wx:else>
+      <template is='cla' data='{{namm:namm2, is_timee:"False", count:(count+1)}}' />
+    </view>
+  </view>
+</template>
+<!-- 
+
+<view style='height:0rpx'></view>
+<view class='flex1'>
+  <view style='height:1rpx;width:150rpx;background-color:#ffffff'></view>
+  <view style='height:1rpx;width:600rpx;background-color:#eeeeee'></view>
+  <view style='height:1rpx;width:100rpx;background-color:#ffffff'></view>
+
+</view> -->
+
+
+<!-- <view class='dline3'></view>
+<view class='flex1'>
+  <view class='blanklr1'></view>
+  <view class='block1 bg-1'></view>
+  <view class='blanklr1'></view>
+  <picker class="picker block2 title2 bg-1" bindchange="bindchange" value="{{index}}" range="{{Data}}">
+    <view class='flex1 bg-1 title2'>
+      {{Data[index]}}
+    </view>
+  </picker>
+</view> -->
+<!-- <template is='cla' data = '{{namm : dayy, timee : timee, count : ""}}' /> -->
+
+
+<!-- <template name="title"> -->
+<view style="height:25%;width:60%;">
+  <view style="height:20%"></view>
+  <view class="flex1" style='height:70%'>
+    <view style="width:13%;height:100%"></view>
+    <view style='width:10rpx;height:100%;'>
+      <view style='width:100%;height:7%;'></view>
+      <view style='width:100%;height:70%;background-color:#56164c'></view>
+    </view>
+    <view style="width:40rpx;height:100%;"></view>
+    <view>
+      <view style="height:80rpx;" class="title1">{{room}}</view>
+      <view style="height:10rpx;"></view>
+      <picker mode='selector' range='{{Data}}' bindchange='select_time' value='{{dayy-1}}'>
+        <view style="height:40rpx;" class="title2">{{Data[dayy-1]}}</view>
+        <view style="height:40rpx;" class="title2">Class {{timee}}</view>
+
+      </picker>
+
+    </view>
+
+  </view>
+</view>
+<!-- </template> -->
+
+<scroll-view style="height:70%" scroll-x="True">
+  <template is='cla2' data='{{namm : clas[0], namm2:clas[1], timee : timee, count : 1}}' />
+  <template is='cla2' data='{{namm : clas[2], namm2:clas[3], timee : timee, count : 3}}' />
+  <template is='cla2' data='{{namm : clas[4], namm2:clas[5], timee : timee, count : 5}}' />
+  <template is='cla2' data='{{namm : clas[6], namm2:clas[7], timee : timee, count : 7}}' />
+  <template is='cla2' data='{{namm : clas[8], namm2:clas[9], timee : timee, count : 9}}' />
+  <template is='cla2' data='{{namm : clas[10], namm2:clas[11], timee : timee, count : 11}}' />
+  <template is='cla2' data='{{namm : clas[12], namm2:clas[13], timee : timee, count : 13}}' />
+</scroll-view>

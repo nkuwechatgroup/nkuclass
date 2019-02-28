@@ -147,18 +147,18 @@
   <!-- <navigator style="display:flex;width:100%;justify-content:center;" url='../back/back?room_name={{room}}'>
     <image src='png/help.png' id='help_img'></image>
   </navigator> -->
-  <view id='help2'>
-    <view id='back2'>数据有误?</view>
-    <view style="width:10rpx;"></view>
-    <view style="width:10rpx;background-color:#444;height:25rpx;"></view>
-    <view style="width:10rpx;"></view>
-    <button type='default' size='mini' plain='false' class="contact1" style="border:none"
-            session-from='{"nickName":"{{userInfo.nickName}}","avatarUrl":"{{userInfo.avatarUrl}}"}' 
-            open-type="contact" > 
-            <view id='back3'>联系客服</view>
-            
-          </button>
-  </view>
 
-  <view style="height:80rpx"></view>
 </scroll-view>
+
+<view id='help2'>
+  <view id='back2'>数据有误?</view>
+  <view style="width:10rpx;"></view>
+  <view style="width:10rpx;background-color:#444;height:25rpx;"></view>
+  <view style="width:10rpx;"></view>
+  <button type='default' size='mini' plain='false' class="contact1" style="border:none" session-from='{"nickName":"{{userInfo.nickName}}","avatarUrl":"{{userInfo.avatarUrl}}"}' open-type="contact">
+    <view id='back3'>联系客服</view>
+
+  </button>
+</view>
+
+<view style="height:80rpx"></view>

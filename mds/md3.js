@@ -74,6 +74,16 @@ function datas_load(day, clas, type) {
   // var _this = this
   console.log(num2)
 
+  wx.cloud.callFunction({
+    name:'statistics',
+    data:{
+      clas:clas,
+      day:day,
+      room:'main'
+    },
+    success:console.log,
+    fail:console.log
+  })
 
   if (day == 0) {
     day = 7

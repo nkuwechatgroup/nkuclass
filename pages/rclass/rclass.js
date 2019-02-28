@@ -217,8 +217,8 @@ Page({
     //   minutes: time1.getMinutes(),
     //   day: time1.getDay(),
     //   date: time1.getDate(),
-    //   loacte: app.globalData.locate,
-    //   num: options.num
+    //   // loacte: app.globalData.locate,
+    //   room: options.room
     // }
 
     // wx.cloud.callFunction({
@@ -328,6 +328,17 @@ Page({
         main_clas = _this.parse_data(res.result.data)
         _this.select_time(event)
       }
+    })
+
+    wx.cloud.callFunction({
+      name: 'statistics',
+      data: {
+        clas: _this.data.timee,
+        day: _this.data.dayy,
+        room: _this.data.room
+      },
+      success: console.log,
+      fail: console.log
     })
     // db.collection('room_info').where({
     //   num: _this.data.room

@@ -88,6 +88,8 @@ page {
 }
 
 .contact1 {
+  position: absolute;
+  left:350rpx;
   /* line-height: 30rpx; */
   font-size: 25rpx;
   text-align: left;
@@ -106,6 +108,8 @@ page {
   font-weight: 200;
   text-align: right;
   width: 360rpx;
+  position: relative;
+  top: 10rpx;
 }
 
 #back3{

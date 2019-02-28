@@ -144,17 +144,18 @@
   <template is='cla2' data='{{namm : clas[10], namm2:clas[11], timee : timee, count : 11}}' />
   <template is='cla2' data='{{namm : clas[12], namm2:clas[13], timee : timee, count : 13}}' />
   <view style="height:40rpx"></view>
-  <!-- <navigator style="display:flex;width:100%;justify-content:center;" url='../back/back?room_name={{room}}'>
+  <!-- <navigator style="display:flex;width:100%;justify-content:center;" >
     <image src='png/help.png' id='help_img'></image>
   </navigator> -->
 
 </scroll-view>
 
 <view id='help2'>
-  <view id='back2'>数据有误?</view>
+  <navigator id='back2' url='../back/back?room_name={{room}}'>数据有误?</navigator>
+  <view ></view>
   <view style="width:10rpx;"></view>
-  <view style="width:10rpx;background-color:#444;height:25rpx;"></view>
-  <view style="width:10rpx;"></view>
+  <view style="width:5rpx;background-color:#888;height:25rpx;position:relative;top:20rpx;"></view>
+  <view style="width:8rpx;"></view>
   <button type='default' size='mini' plain='false' class="contact1" style="border:none" session-from='{"nickName":"{{userInfo.nickName}}","avatarUrl":"{{userInfo.avatarUrl}}"}' open-type="contact">
     <view id='back3'>联系客服</view>
 

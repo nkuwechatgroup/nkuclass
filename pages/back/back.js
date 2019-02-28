@@ -118,7 +118,7 @@ Page({
     var tt = JSON.stringify(table)
     var _this = this
 
-    var cloud_path = 'back/' + _this.data.img_path.split(12,)
+    var cloud_path = 'back/' + _this.data.img_path.slice(12,)
     wx.cloud.uploadFile({
       cloudPath:cloud_path,
       filePath:_this.data.img_path,
@@ -161,6 +161,10 @@ Page({
     this.setData({
       table:table2
     })
+    wx.showToast({
+      title: '点击改变你认为不正确的地方',
+      icon: 'none'
+    })
     // console.log(table2)
   },
 
@@ -175,10 +179,7 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
-    wx.showToast({
-      title: '点击改变你认为不正确的地方',
-      icon: 'none'
-    })
+
   },
 
   /**

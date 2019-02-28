@@ -19,6 +19,10 @@ function parse_data1(data, type, num) {
   console.log(num)
   if (num != 0) {
     datas1['num'] = num
+    if(datas1[""]!=undefined){
+      delete datas1[""]
+    }
+    console.log(datas1)
     db.collection('fast_list').add({
       data: datas1,
       success: console.log,
@@ -83,12 +87,16 @@ function datas_load(day, clas, type) {
         app.globalData.datas = res.data[0]
         flash(type)
       } else {
-        wx.showLoading({
+        // wx.showLoading({
+        //   title: '悄悄的等一下',
+        // })
+        // setTimeout(function () {
+        //   wx.hideLoading()
+        // }, 1500)
+        wx.showToast({
           title: '悄悄的等一下',
+          icon:'loading'
         })
-        setTimeout(function () {
-          wx.hideLoading()
-        }, 1500)
         wx.cloud.callFunction({
           name:'list_getcount',
           data:{

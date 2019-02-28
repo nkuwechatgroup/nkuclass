@@ -1,0 +1,56 @@
+/* pages/class_info/class_info.wxss */
+#block1{
+  /* position: absolute; */
+  
+  /* top:200rpx; */
+  /* left:220rpx; */
+  /* width:400rpx; */
+
+}
+
+.cir{
+  height:15rpx;
+  width:15rpx;
+  background-color:rgba(126,12,110,0.5);
+  position: relative;
+  top:17rpx;
+  border-radius: 7rpx;
+}
+
+#rtc{
+  height:45rpx;
+  width:15rpx;
+  background-color:rgb(126,12,110);
+  position: relative;
+  top:10rpx;
+}
+
+page{
+  width:100%;
+  height:100%;
+}
+
+#main{
+  display: flex;
+  justify-content: center;
+  align-content: center;
+}
+
+#well_text{
+  position: absolute;
+  left:270rpx;
+  top:130rpx;
+}
+
+#well_img{
+  width:200rpx;
+  /* height:200rpx; */
+}
+
+#well_t{
+  position: relative;
+  left:-20rpx;
+  top:10rpx;
+  font-size: 32rpx;
+  color:#444;
+}

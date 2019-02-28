@@ -1,0 +1,59 @@
+<!--pages/back/back.wxml-->
+
+<!-- <view style="height:20rpx;"></view> -->
+<swiper current='{{index}}' style="height:100%">
+  <swiper-item>
+    <view style="height:100rpx"></view>
+    <view id='choose_box1'>
+      <view style="height:45rpx"></view>
+      <view style="display:flex; width:100%;justify-content: center;">
+        <view style="display:flex">
+          <view class='dot'></view>
+          <view style="width:10rpx"></view>
+          <view style="fint-size:50rpx;color:#222">{{room_name}}</view>
+          <view style="width:10rpx"></view>
+          <view class='dot'></view>
+        </view>
+
+      </view>
+      <view style="height:45rpx"></view>
+      <view id="text1">{{class_name}}</view>
+      <view style="display:flex">
+        <view wx:for="{{days}}" style="display:flex">
+          <view style="width:20rpx"></view>
+          <view class="days">{{item}}</view>
+
+        </view>
+      </view>
+      <view wx:for="{{table}}" wx:for-item='item1' wx:for-index='index1' style="display:flex">
+        <view wx:for="{{item1}}" wx:for-index='index2' style="display:flex" wx:for-item='item2'>
+          <view style="width:20rpx"></view>
+
+          <view style="background-color:{{item2.type.length==0?'#eee':'rgb(126,12,110)'}};" class='{{index1%2==0?"block1":"block2"}}' bindtap='change_type' data-id="{{[index1, index2]}}"></view>
+
+          <view style="height:55rpx" wx:if="{{index1%2==1}}"></view>
+        </view>
+      </view>
+
+    </view>
+    <!-- <view style="height:100rpx"></view> -->
+    <view id='arrow' bindtouchstart='well_up' bindtouchend='well_end' bindtap='next1'>
+      <image src='png/arrow.png' style="height:30rpx;width:80rpx;"></image>
+    </view>
+    <image wx:if="{{well}}" id='well_img' src='png/well.png' bindtap='well_end'></image>
+  </swiper-item>
+
+  <swiper-item>
+    <view id="text_box1">
+      <view class='dot'></view>
+      <view style="width:20rpx"></view>
+      <view id="text2" bindtap='upload1'>上传证明图片</view>
+      <view style="width:20rpx"></view>
+      <view class='dot'></view>
+    </view>
+    <view id="img_box" bindtap='upload1'>
+      <image src='{{img_path}}' id="img1" mode="aspectFit"></image>
+    </view>
+    <image id='img2' src='png/up.png' bindtap='saveit'></image>
+  </swiper-item>
+</swiper>

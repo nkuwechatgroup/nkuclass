@@ -2,34 +2,41 @@
 <template name='cla'>
 
   <!-- <view wx:if="{{namm.name!=''}}"> -->
-  <view style='height:15rpx'></view>
-  <view class='flex1'>
-    <view style='width:60rpx'></view>
-    <view style='width:70rpx;height:100rpx'>
-      <view style='height:15rpx'></view>
-      <view wx:if="{{is_timee=='True'}}">
-        <view class='subclass no'>{{count}}</view>
-      </view>
-      <view wx:else>
-        <view class='subclass full'>{{count}}</view>
-        <view></view>
-      </view>
-    </view>
-    <view style='width:25rpx'></view>
-    <view style='height:100rpx'>
-      <view wx:if="{{is_timee=='True'}}">
-        <view style='font-size:35rpx;height:45rpx'>{{namm.name}}</view>
-        <view style='font-size:25rpx'>{{namm.teacher}}</view>
-      </view>
-      <view wx:else>
-        <view style='font-size:35rpx;height:45rpx;color:#aaaaaa'>{{namm.name}}</view>
-        <view style='font-size:25rpx;color:#aaaaaa'>{{namm.teacher}}</view>
-      </view>
-    </view>
-    <!-- </view> -->
 
 
-  </view>
+  <navigator url='../class_info/class_info?class_name={{namm.name}}&teacher_name={{namm.teacher}}'>
+    <view style='height:20rpx'></view>
+    <view class='flex1'>
+      <view style='width:60rpx'></view>
+      <view style='width:70rpx;height:100rpx'>
+        <view style='height:15rpx'></view>
+        <view wx:if="{{is_timee=='True'}}">
+          <view class='subclass no'>{{count}}</view>
+        </view>
+        <view wx:else>
+          <view class='subclass full'>{{count}}</view>
+          <view></view>
+        </view>
+      </view>
+      <view style='width:30rpx'></view>
+      <view style='height:90rpx'>
+        <view wx:if="{{is_timee=='True'}}">
+          <view style='font-size:35rpx;height:45rpx'>{{namm.sname}}</view>
+          <view style='font-size:25rpx' wx:if="{{namm.teacher!=''}}">·{{namm.teacher}}·</view>
+        </view>
+        <view wx:else>
+          <view style='font-size:35rpx;height:45rpx;color:#aaaaaa'>{{namm.sname}}</view>
+          <view style='font-size:25rpx;color:#aaaaaa' wx:if="{{namm.teacher!=''}}">·{{namm.teacher}}·</view>
+        </view>
+      </view>
+    </view>
+
+
+  </navigator>
+
+  <!-- </view> -->
+
+
   <!-- <view wx:elif="{{is_timee&&namm.name==''}}">
     <view style='height:30rpx'></view>
     <view class='center' style='width:750rpx;height:100rpx;color:#333333'>·{{count}}·</view>
@@ -40,10 +47,10 @@
   </view> -->
 
   <view class='flex1'>
-    <view style='height:2rpx;width:150rpx;background-color:#ffffff'></view>
-    <view style='height :2rpx;width:550rpx;background-color:#eeeeee'></view>
+    <view style='height:2rpx;width:160rpx;background-color:#ffffff'></view>
+    <view style='height :2rpx;width:540rpx;background-color:#eeeeee'></view>
     <!-- <view style='height:1rpx;width:100rpx;background-color:#ffffff'></view> -->
-    <view style='height:2rpx;width:150rpx;background-color:#ffffff'></view>
+    <view style='height:2rpx;width:10rpx;background-color:#ffffff'></view>
   </view>
 </template>
 
@@ -97,7 +104,7 @@
 
 
 <!-- <template name="title"> -->
-<view style="height:25%;width:60%;">
+<view style="height:300rpx;width:60%;">
   <view style="height:20%"></view>
   <view class="flex1" style='height:70%'>
     <view style="width:13%;height:100%"></view>
@@ -107,11 +114,11 @@
     </view>
     <view style="width:40rpx;height:100%;"></view>
     <view>
-      <view style="height:80rpx;" class="title1">{{room}}</view>
+      <view style="height:80rpx;" class="title1">{{room_s}}</view>
       <view style="height:10rpx;"></view>
       <picker mode='selector' range='{{Data}}' bindchange='select_time' value='{{dayy-1}}'>
-        <view style="height:40rpx;" class="title2">{{Data[dayy-1]}}</view>
-        <view style="height:40rpx;" class="title2">Class {{timee}}</view>
+        <view style="height:40rpx;" class="title2">{{Data[dayy]}}</view>
+        <view style="height:40rpx;" class="title2">Class {{(timee)}}</view>
 
       </picker>
 
@@ -121,12 +128,37 @@
 </view>
 <!-- </template> -->
 
-<scroll-view style="height:70%" scroll-x="True">
+<scroll-view style="height:75%;z-index:100" scroll-y="True" bindtouchstart='touch_start' bindtouchend='touch_end'>
+  <view style="height:40rpx;width:100%" class="flex1" wx:if="{{warn!=''}}">
+    <view style="width:70rpx"></view>
+    <view class="warn1">{{warn}}</view>
+  </view>
   <template is='cla2' data='{{namm : clas[0], namm2:clas[1], timee : timee, count : 1}}' />
   <template is='cla2' data='{{namm : clas[2], namm2:clas[3], timee : timee, count : 3}}' />
+  <!-- <view style="height:20rpx"></view> -->
   <template is='cla2' data='{{namm : clas[4], namm2:clas[5], timee : timee, count : 5}}' />
+  <!-- <view style="height:20rpx"></view> -->
   <template is='cla2' data='{{namm : clas[6], namm2:clas[7], timee : timee, count : 7}}' />
   <template is='cla2' data='{{namm : clas[8], namm2:clas[9], timee : timee, count : 9}}' />
+  <!-- <view style="height:20rpx"></view> -->
   <template is='cla2' data='{{namm : clas[10], namm2:clas[11], timee : timee, count : 11}}' />
   <template is='cla2' data='{{namm : clas[12], namm2:clas[13], timee : timee, count : 13}}' />
+  <view style="height:40rpx"></view>
+  <!-- <navigator style="display:flex;width:100%;justify-content:center;" url='../back/back?room_name={{room}}'>
+    <image src='png/help.png' id='help_img'></image>
+  </navigator> -->
+  <view id='help2'>
+    <view id='back2'>数据有误?</view>
+    <view style="width:10rpx;"></view>
+    <view style="width:10rpx;background-color:#444;height:25rpx;"></view>
+    <view style="width:10rpx;"></view>
+    <button type='default' size='mini' plain='false' class="contact1" style="border:none"
+            session-from='{"nickName":"{{userInfo.nickName}}","avatarUrl":"{{userInfo.avatarUrl}}"}' 
+            open-type="contact" > 
+            <view id='back3'>联系客服</view>
+            
+          </button>
+  </view>
+
+  <view style="height:80rpx"></view>
 </scroll-view>

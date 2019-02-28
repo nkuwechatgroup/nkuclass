@@ -18,7 +18,7 @@ Page({
   next: function(event) {
     // console.log(event)
     var index = Number(event.target.dataset.index)
-    if (index == 8) {
+    if (index == -1 ) {
       wx.navigateBack({
         delta:1
       })
@@ -35,7 +35,9 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function(options) {
-
+    this.setData({
+      now_index:options.index
+    })
   },
 
   /**

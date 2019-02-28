@@ -1,0 +1,37 @@
+<view style="height:200rpx;"></view>
+
+<view id="main" wx:if="{{class_name!=''}}">
+  <view>
+    <view style="display:flex;width:100%">
+      <view id='rtc'></view>
+      <view style="width:40rpx;"></view>
+      <view style=" width:{{class_name.length>12?'400rpx':''}};font-size:45rpx;color:#4a4a4a;">{{class_name}}</view>
+    </view>
+    <view style="height:5rpx"></view>
+    <view style="display:flex">
+      <!-- <view class="cir " ></view> -->
+      <view style="width:55rpx;"></view>
+      <view style="width:250rpx;font-size:30rpx;color:#4a4a4a;">{{teacher_name}}</view>
+    </view>
+    <view style="height:50rpx"></view>
+    <view wx:for="{{time_info}}">
+      <view style="display:flex">
+        <view class="cir"></view>
+        <view style="width:45rpx;"></view>
+        <view style=" width:250rpx;font-size:33rpx;color:#4a4a4a;">{{item.time}}</view>
+      </view>
+      <view style="display:flex">
+        <!-- <view class="cir " ></view> -->
+        <view style="width:60rpx;"></view>
+        <view style="width:250rpx;font-size:24rpx;color:#9b9b9b;">{{item.room}}</view>
+
+      </view>
+      <view style="height:40rpx"></view>
+    </view>
+
+  </view>
+</view>
+<view wx:else id='well_text'>
+  <image id='well_img' src='../back/png/well.png' mode='aspectFit'></image>
+  <view id="well_t">"呃·什么也没有发生"</view>
+</view>

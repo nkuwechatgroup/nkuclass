@@ -37,3 +37,15 @@ page {
     text-align: left;
     vertical-align: bottom;
 }
+
+.contact1{
+  line-height: 30rpx;
+  font-size: 25rpx;
+  color:#7e0c6e;
+  /* color:#ffffff; */
+  font-weight: 200;
+  /* border: none; */
+  height:50rpx;
+  /* background-color: #999999; */
+  border-radius: 20rpx;
+}

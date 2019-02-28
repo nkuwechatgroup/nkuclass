@@ -54,7 +54,7 @@
       <template is='title' data="{{pngs:'../../png/ico/ico01.png',room:'二主楼·B区',index:1}}" />
       <template is='title' data="{{pngs:'../../png/ico/ico1.png',room:'主楼',index:2}}" />
       <template is='title' data="{{pngs:'../../png/ico/ico3.png',room:'数学科学学院',index:3}}" />
-      <template is='title' data="{{pngs:'../../png/ico/ico4.png',room:'经院·园阶',index:4}}" />
+      <template is='title' data="{{pngs:'../../png/ico/ico4.png',room:'经济学院',index:4}}" />
       <template is='title' data="{{pngs:'../../png/ico/ico2.png',room:'外院·七教',index:5}}" />
       <view style='height:40rpx;width:750rpx' bindtap='back_to_main'></view>
     </scroll-view>
@@ -62,43 +62,59 @@
 
   </swiper-item>
   <swiper-item>
-  
-    <view style='height:100%;width:750rpx' class='gradients1' bindtap='select_tap2'>
-      <view style='height:23%'></view>
-      <view class='title3'>去</view>
-      <!-- <view class='title3'>{{'< 八里台·津南 >'}}</view> -->
-      <view class='title3'>自</view>
-      <view class='title3'>习</view>
-      <view style='height:20rpx'></view>
-      <view class='title3'>不</view>
-      <view class='title3'>需</view>
-      <view class='title3'>要</view>
-      <view class='title3'>理</view>
-      <view class='title3'>由</view>
-      <view style='height:12%'></view>
-      <view style='display: flex;justify-content: center;width:100%' class='title3'>
-      </view>
-      <view style='height:5%'></view>
-      <view style='display: flex;justify-content: center;width:100%'>
-        <image src='../../png/2.png' mode='aspectFit' style='width:750rpx;height:150rpx' bindtap='select_tap'></image>
-      </view>
-      <!-- <view style='height:3%'></view> -->
-      
-        <view class='title2'>a12910@qq.com</view>
-        <view class='title2'>v1.3.9 | db: {{db_data}}</view>
-        <contact-button class='title2' size="20rpx"></contact-button>
-      <!-- <image src='../../png/bg.png' mode='aspectFill' style='width:100%;height:100%'></image> -->
-    </view>
-    <view style='height:200rpx;'>
+    <scroll-view scroll-y='True' style='width:100%;height:100%'>
+      <view style='height:100%;width:750rpx' class='gradients1' bindtap='select_tap2'>
+        <view style='height:20%'></view>
+        <view class='title3'>去</view>
+        <!-- <view class='title3'>{{'< 八里台·津南 >'}}</view> -->
+        <view class='title3'>自</view>
+        <view class='title3'>习</view>
+        <view style='height:20rpx'></view>
+        <view class='title3'>不</view>
+        <view class='title3'>需</view>
+        <view class='title3'>要</view>
+        <view class='title3'>理</view>
+        <view class='title3'>由</view>
+        <view style='height:12%'></view>
+        <view style='display: flex;justify-content: center;width:100%' class='title3'>
+        </view>
+        <view style='height:5%'></view>
+        <view style='display: flex;justify-content: center;width:100%'>
+          <image src='../../png/2.png' mode='aspectFit' style='width:750rpx;height:150rpx' bindtap='select_tap'></image>
+        </view>
+        <!-- <view style='height:3%'></view> -->
+        <view style="display:flex;color:#ffffff">
+          <!-- <view style="width:80rpx"></view> -->
+          <button type='default' size='mini' plain='false' class="contact1" style="border:none"
+            session-from='{"nickName":"{{userInfo.nickName}}","avatarUrl":"{{userInfo.avatarUrl}}"}' 
+            open-type="contact" > 
+            联系客服🤔
+          </button>
+            
+        </view>
 
-    </view>
+        <view class='title2'>👉 a12910@qq.com 👈</view>
+        <view class='title2'>v{{mark}} | db: {{db_data}}</view>
 
+        <view style="display:flex;height:100rpx">
+          <view style="width:265rpx"></view>
+          <view class="contact1"></view>
+          <view style="width:20rpx"></view>
+          <!-- <contact-button size="20rpx"></contact-button> -->
+          
+          <view style="width:20rpx"></view>
+          <view class="contact1"></view>
+        </view>
+
+        <!-- <image src='../../png/bg.png' mode='aspectFill' style='width:100%;height:100%'></image> -->
+      </view>
+    </scroll-view>
   </swiper-item>
   <swiper-item>
     <view style='display:flex' bindtap='back_to_main'>
       <view style='width:50rpx'></view>
-      <view class='center2' >津南校区</view>
-      
+      <view class='center2'>津南校区</view>
+
     </view>
     <scroll-view scroll-y='True' style='width:100%;height:80%'>
       <view style='height:20rpx'></view>
@@ -112,3 +128,4 @@
 
   </swiper-item>
 </swiper>
+

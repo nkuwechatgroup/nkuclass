@@ -23,6 +23,10 @@
   height: 30rpx;
 }
 
+.warn1{
+  font-size: 17rpx;
+  color:#999999;
+}
 
 
 /* ::-webkit-scrollbar {
@@ -75,7 +79,7 @@ page {
   /* color: #111111; */
   text-align: center;
   /* background-color: #ffffff; */
-
+  /* border: 3rpx solid transparent; */
 }
 /* 没课 */
 .full
@@ -116,8 +120,8 @@ page {
 /* 教室不可用 */
 .notu
 {
-  background-color: #eeeeee;
-  color:#bbbbbb;
+  background-color: #f8f8f8;
+  color:#aaaaaa;
   border: 3rpx solid transparent;
   border-radius: 100rpx;
 }

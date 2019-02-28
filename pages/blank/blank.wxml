@@ -1,7 +1,14 @@
 <!--blank.wxml-->
 <view style='height:300rpx;width:100&'></view>
 <view style='height:500rpx;width:100%' class='title1'>
-    {{text}}
+  {{text}}
+</view>
+<view style="height:300rpx"></view>
+<view style="display:flex">
+  <!-- <view style="width:200rpx"></view> -->
+  <button type='default' size='mini' plain='false' class="contact1" style="border:none" session-from='{"nickName":"{{userInfo.nickName}}","avatarUrl":"{{userInfo.avatarUrl}}"}' open-type="contact">
+    联系客服🤔
+  </button>
 </view>
 
 <!-- <view class='flex1'>

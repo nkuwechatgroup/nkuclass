@@ -25,35 +25,31 @@
 
   </swiper-item>
   <swiper-item>
-    <template is='helps' data="{{pngs:'help3.png',indexs:3}}" />
+    <template is='helps' data="{{pngs:'help8.png',indexs:3}}" />
 
 
   </swiper-item>
   <swiper-item>
-    <template is='helps' data="{{pngs:'help4.png',indexs:4}}" />
+    <template is='helps' data="{{pngs:'help7.png',indexs:-1}}" />
 
 
   </swiper-item>
   <swiper-item>
-    <template is='helps' data="{{pngs:'help5.png',indexs:5}}" />
+    <template is='helps' data="{{pngs:'help4.png',indexs:5}}" />
 
 
   </swiper-item>
   <swiper-item>
-    <template is='helps' data="{{pngs:'help8.png',indexs:6}}" />
+    <template is='helps' data="{{pngs:'help5.png',indexs:6}}" />
 
 
   </swiper-item>
   <swiper-item>
-    <template is='helps' data="{{pngs:'help7.png',indexs:7}}" />
+    <template is='helps' data="{{pngs:'help6.png',indexs:-1}}" />
 
 
   </swiper-item>
-  <swiper-item>
-    <template is='helps' data="{{pngs:'help6.png',indexs:8}}" />
-
-
-  </swiper-item>
+  
 
 
 

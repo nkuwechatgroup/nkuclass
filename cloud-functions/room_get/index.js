@@ -6,6 +6,6 @@ const db = cloud.database()
 // 云函数入口函数
 exports.main = async (event, context) => await db.collection('main_list2').where({
   room:event.room,
-  week3:1
+  week4:1
 })
   .get()

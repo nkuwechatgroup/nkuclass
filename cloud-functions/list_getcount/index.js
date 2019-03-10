@@ -11,7 +11,7 @@ exports.main = async(event, context) => {
   return await db.collection('main_list2').where({
     day: event.day,
     'class': event.clas,
-    week3: 1
+    week4: 1
 
   }).count()
 }

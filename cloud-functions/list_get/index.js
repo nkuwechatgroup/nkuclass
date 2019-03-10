@@ -8,7 +8,7 @@ const _ = db.command
 exports.main = async(event, context) => await db.collection('main_list2').where({
     day: event.day,
     'class': event.clas,
-    week3: 1
+    week4: 1,
 
   })
   .skip(event.skip)
